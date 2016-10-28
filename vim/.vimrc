@@ -72,6 +72,9 @@ set mat=2
 
 " Syntax highlighting
 syntax enable 
+au bufNewFile,BufRead *.csx set filetype=cs
+au bufNewFile,BufRead *.tag set filetype=html
+let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 set number
 set mouse=a
@@ -89,7 +92,7 @@ set tw=500
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 if has("mac") || has("macunix")
-    set gfn=Hack:h14,Source\ Code\ Pro:h15,Menlo:h15
+    set gfn=Hack:h12,Source\ Code\ Pro\ for\ Powerline:h13,Menlo:h35
 elseif has("win16") || has("win32")
     set gfn=Hack:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
 elseif has("gui_gtk2")
@@ -102,8 +105,8 @@ endif
 
 execute pathogen#infect()
 set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+" let g:solarized_termcolors=256
+colorscheme darcula
 set cmdheight=2
 let g:syntastic_javascript_checkers = ['eslint']
 let g:jsx_ext_required = 0
