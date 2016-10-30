@@ -92,7 +92,7 @@ set tw=500
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 if has("mac") || has("macunix")
-    set gfn=Hack:h12,Source\ Code\ Pro\ for\ Powerline:h13,Menlo:h35
+    set gfn=Hack:h12,Source\ Code\ Pro\ for\ Powerline:h13,Menlo:h15
 elseif has("win16") || has("win32")
     set gfn=Hack:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
 elseif has("gui_gtk2")
@@ -104,8 +104,6 @@ elseif has("unix")
 endif
 
 execute pathogen#infect()
-set background=dark
-" let g:solarized_termcolors=256
 colorscheme darcula
 set cmdheight=2
 let g:syntastic_javascript_checkers = ['eslint']
@@ -131,4 +129,14 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules)$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
+
+" Disabling the directional keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
 
