@@ -74,6 +74,7 @@ set mat=2
 syntax enable 
 au bufNewFile,BufRead *.csx set filetype=cs
 au bufNewFile,BufRead *.tag set filetype=html
+au bufNewFile,BufRead *.vue set filetype=html
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 set number
