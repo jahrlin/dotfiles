@@ -93,7 +93,7 @@ set tw=500
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 if has("mac") || has("macunix")
-    set gfn=Hack:h12,Source\ Code\ Pro\ for\ Powerline:h13,Menlo:h15
+    set gfn=Source\ Code\ Pro\ for\ Powerline:h13,Menlo:h15
 elseif has("win16") || has("win32")
     set gfn=Hack:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
 elseif has("gui_gtk2")
@@ -141,3 +141,9 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+set autochdir
+set tags=tags;
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
