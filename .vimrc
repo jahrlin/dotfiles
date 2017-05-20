@@ -99,18 +99,6 @@ set tw=500
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-if has("mac") || has("macunix")
-  set gfn=Source\ Code\ Pro\ for\ Powerline:h15,Menlo:h16
-elseif has("win16") || has("win32")
-  set gfn=Hack:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
-elseif has("gui_gtk2")
-  set gfn=Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
-elseif has("linux")
-  set gfn=Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
-elseif has("unix")
-  set gfn=Monospace\ 11
-endif
-
 execute pathogen#infect()
 set cmdheight=2
 let g:syntastic_javascript_checkers = ['eslint']
