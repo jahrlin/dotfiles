@@ -105,6 +105,8 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:jsx_ext_required = 0
 let g:javascript_enable_domhtmlcss = 1
 
+colorscheme nord
+
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
